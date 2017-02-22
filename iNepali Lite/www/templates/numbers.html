@@ -1,0 +1,12 @@
+<ion-view view-title="Numbers" ng-init="init()" cache-view="false" style="background-color:black">
+<ion-content scroll="false">
+    <ion-slides options="options" slider="data.slider">
+        <ion-slide-page ng-repeat="item in data">
+            <div class="box">
+                <img ng-click="play_ext()" ng-src="img/{{item.char}}.gif">
+            <div class="english">{{item.english}}</div>    
+            </div>
+        </ion-slide-page>
+    </ion-slides>
+</ion-content>
+</ion-view>

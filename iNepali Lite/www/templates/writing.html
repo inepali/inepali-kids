@@ -1,0 +1,65 @@
+<ion-view view-title="Writing" ng-init="initHome()" cache-view="false">
+
+       <ion-nav-buttons side="right">
+            <a class="button button-clear ion-videocamera" href="#/app/video"></a>
+        </ion-nav-buttons>
+
+    <ion-content scroll="false" draggable="false">
+
+
+
+
+        <div pw-canvas options="{undo:true, width:1200, height: 350, backgroundColor:'#f4f6f9', color: selectedColor, lineWidth: selectedLineWidth }"
+            version="version"></div>
+        <div pw-color-selector="['#f4f6f9', '#000', '#9CB199', '#CF3759', '#485247', '#E77547', '#D38E47', '#0A6A74', '#153974']" color="selectedColor"></div>
+
+
+        <div class="list">
+
+            <div class="item range">
+
+                <button class="button button-small button-royal" ng-click="changeLineWidth(-1)"><span class="icon ion-minus"></span></button>
+                <input type="range" ng-model="selectedLineWidth" name="lineWidth" min="1" max="20"
+                    value="3">
+                <button class="button button-small button-royal" ng-click="changeLineWidth(1)"><span class="icon ion-plus"></span></button>
+            </div>
+
+
+        </div>
+        <div class="top">
+
+            <button class="button button-small button-royal" ng-readonly="true">Line Size: {{selectedLineWidth}}</button>
+            <button class="button button-small button-royal icon ion-reply" ng-click="undo()" ng-disabled="version < 1"> {{version}}</button>
+            <!--button class="button button-small button-royal" ng-click="upload()" ng-disabled="version < 1">Upload</button-->
+            <!--a class="button button-small button-royal" ng-click="download(this)" ng-disabled="version < 1">Download</a-->
+            <button class="button button-small button-royal icon ion-reply-all" ng-click="clear()" ng-disabled="version < 1"> All</button>
+
+        </div>
+
+
+
+        <div class="list-inset text-center item-boarderless">
+            <a href="#/app/vowels">
+                <ionic-letter-avatar shape="round" data="अ"></ionic-letter-avatar>
+            </a>
+
+            <a href="#/app/consonents" style="padding-left: 5px">
+<ionic-letter-avatar shape="round" data="क"></ionic-letter-avatar>
+</a>
+
+<a href="#/app/numbers" style="padding-left: 5px">
+<ionic-letter-avatar shape="round" data="१"></ionic-letter-avatar>
+</a>
+
+<a href="#/app/barkhari" style="padding-left: 5px">
+<ionic-letter-avatar shape="round" charcount="2" data="बा"></ionic-letter-avatar>
+</a>
+
+<a href="#/app/video" style="padding-left: 5px">
+<ionic-letter-avatar shape="round" charcount="2" data="V"></ionic-letter-avatar>
+</a>
+
+</div>
+
+</ion-content>
+</ion-view>

@@ -1,0 +1,44 @@
+<ion-view view-title="Watch & Learn" ng-ini="loadVideo()">
+
+    <ion-nav-buttons side="right">
+        <a class="button button-clear ion-edit" href="#/app/writing"></a>
+    </ion-nav-buttons>
+
+<div class="tabs-striped tabs-color-assertive tabs-top tabs-color-light">
+    <div class="tabs tabs-icon-top">
+      <a class="tab-item {{selectedTab==0?'active':''}}" ng-click="changeTab(0)">
+        <i class="icon ion-videocamera"></i>
+        Lessons
+      </a>
+      <a class="tab-item {{selectedTab==1?'active':''}}" ng-click="changeTab(1)">
+        <i class="icon ion-edit"></i>
+        Strokes
+      </a>
+      <a class="tab-item {{selectedTab==2?'active':''}}" ng-click="changeTab(2)">
+        <i class="icon ion-images"></i>
+        Vocabulary
+      </a>
+    </div>
+  </div>
+
+    <ion-content class="has-header has-subheader">
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="refreshVideo()"></ion-refresher>
+        <ion-list>
+            <div class="item-input-inset">
+                <label class="item-input-wrapper">
+                    <i class="icon ion-search placeholder-icon"></i><input type="search" ng-model="search" placeholder="Search Video">
+                </label>
+            </div>
+
+            <ion-item href="#/app/player/{{vdo.id}}" ng-repeat="vdo in videos | filter: { type: type} |filter:search" class="item item-text-wrap item-icon-right">
+                <div style="float:left; padding-right:10px;">
+                    <ionic-letter-avatar shape="round" data="{{vdo.id}}" width="35" height="35" fontsize="{{fontsize}}"></ionic-letter-avatar>
+                </div>
+                <h3>{{vdo.title}}</h3>
+                <h5>{{vdo.createDate | date:'yyyy-MM-dd HH:mm:ss'}}</h5>
+
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

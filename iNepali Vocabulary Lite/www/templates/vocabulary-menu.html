@@ -1,0 +1,26 @@
+<ion-view view-title="Vocabulary Categories" ng-init="init()">
+    <ion-content>
+        <ion-list>
+            <ion-refresher pulling-text="Pull to refresh..." on-refresh="refreshCategory()"></ion-refresher>
+            <ion-item ng-repeat="m in menus" class="item item-icon-right" ng-href="#/app/vocabulary/{{m.id}}/{{m.name}}">
+
+
+
+                <div style="float:left; padding-right:10px;">
+<ionic-letter-avatar ng-if="!m.thumbnail" shape="round" data="{{m.name}}" width="50px"></ionic-letter-avatar>
+<img ng-if="m.thumbnail" ng-src="{{m.thumbnail}}" width="50px" style="float: left; border-radius: 30px">
+</div>
+
+
+<div style="padding-left:10px; padding-top:20px">
+<h2>{{m.name}} <i ng-if="m.youtubeUrl" class="ion-videocamera" style="padding-left:5px" ng-click="playVideo($event, m.youtubeUrl)"></i></h2>
+
+</div>
+
+<i class="icon ion-chevron-right icon-accessory"></i>
+
+</ion-item>
+
+</ion-list>
+</ion-content>
+</ion-view>

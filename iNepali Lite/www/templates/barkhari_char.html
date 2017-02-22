@@ -1,0 +1,42 @@
+<ion-view view-title="Barkhari of {{char}}" ng-init="initBarkhari()">
+    <ion-content>
+
+        <div class="card">
+            <div class="item item-divider">
+                Barkhari of {{char}}
+            </div>
+            <div class="item item-text-wrap" ng-show="char=='nga' || char=='nya' || char=='nna'">
+                No Barkhari available for this letter, try to apply similar logic from other characters.
+            </div>
+       
+
+            <div class="item item-text-wrap" ng-show="char!='nga' && char != 'nya' && char != 'nna'">
+                <div class="row">
+                    <div class="col col-33 text-right"><img ng-click="barkhariClicked(0)" width="90%" ng-src="img/{{char}}0.gif"></div>
+                    <div class="col col-33 text-right"><img ng-click="barkhariClicked(1)" width="90%" ng-src="img/{{char}}1.gif"></div>
+                    <div class="col col-33 text-right"><img ng-click="barkhariClicked(2)" width="90%" ng-src="img/{{char}}2.gif"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-33 text-right"><img ng-click="barkhariClicked(3)" width="90%" ng-src="img/{{char}}3.gif"></div>
+                    <div class="col col-33 text-right"><img ng-click="barkhariClicked(4)" width="90%" ng-src="img/{{char}}4.gif"></div>
+                    <div class="col col-33 text-right"><img ng-click="barkhariClicked(5)" width="90%" ng-src="img/{{char}}5.gif"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-33 text-right"><img ng-click="barkhariClicked(6)" width="90%" ng-src="img/{{char}}6.gif"></div>
+                    <div class="col col-33 text-right"><img ng-click="barkhariClicked(7)" width="90%" ng-src="img/{{char}}7.gif"></div>
+                    <div class="col col-33 text-right"><img ng-click="barkhariClicked(8)" width="90%" ng-src="img/{{char}}8.gif"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-33 text-right"><img ng-click="barkhariClicked(9)" width="90%" ng-src="img/{{char}}9.gif"></div>
+                    <div class="col col-33 text-right"><img ng-click="barkhariClicked(10)" width="90%" ng-src="img/{{char}}10.gif"></div>
+                    <div class="col col-33 text-right"><img ng-click="barkhariClicked(11)" width="90%" ng-src="img/{{char}}11.gif"></div>
+                </div>
+
+            </div>
+         </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-view view-title="Select an Alphabet" ng-init="init()">
+    <ion-content>
+        <ion-list>
+
+            <ion-item ng-repeat="item in data" class="item item-thumbnail-left item-icon-right" ng-href="#/app/barkhari/{{item.char}}">
+
+                <img ng-src="img/{{item.char}}0.gif" width="20px">
+                <div style="padding-left:100px; padding-top:20px">
+                    <h1>{{item.char}}</h1>
+                </div>
+
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

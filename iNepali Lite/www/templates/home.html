@@ -1,0 +1,53 @@
+<ion-view view-title="Welcome to iNepali" ng-init="initHome()" cache-view="false">
+  <ion-content>
+
+    <div class="card">
+      <div class="item item-text-wrap">
+
+        <h4>iNepali is an App to learn Nepali language in your mobile devices. In this version, we include basic Nepali alphabets
+          (Consonants, Vowels and Numbers) with picture cards and Barkhari. Help them to learn and pronounce correctly.</p>
+        </h4>
+      </div>
+    </div>
+
+    <div class="card">
+      <video height="240" controls>
+        <source src="video/iNepaliIntro.mp4" type="video/mp4"> Your browser does not support the video tag.
+      </video>
+    </div>
+
+
+
+
+    <div class="list-inset text-center item-boarderless">
+      <a href="#/app/vowels">
+        <ionic-letter-avatar shape="round" data="अ"></ionic-letter-avatar>
+      </a>
+
+      <a href="#/app/consonents" style="padding-left: 5px">
+<ionic-letter-avatar shape="round" data="क"></ionic-letter-avatar>
+</a>
+
+<a href="#/app/numbers" style="padding-left: 5px">
+<ionic-letter-avatar shape="round" data="१"></ionic-letter-avatar>
+</a>
+
+<a href="#/app/barkhari" style="padding-left: 5px">
+<!--ionic-letter-avatar shape="round" charcount="2" data="बा"></ionic-letter-avatar-->
+<img src="img/barkhari.gif" width="50px" style="border-radius: 30px">
+</a>
+
+<a href="#/app/video" style="padding-left: 5px">
+<ionic-letter-avatar shape="round" charcount="2" data="V"></ionic-letter-avatar>
+</a>
+
+</div>
+
+<!-- social buttons -->
+<div class="text-center">
+<button class="button button-positive icon ion-share" ng-click="share()"> Share</button>
+
+</div>
+
+</ion-content>
+</ion-view>

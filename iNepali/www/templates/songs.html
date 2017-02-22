@@ -1,0 +1,20 @@
+<ion-view view-title="Baal Geet" ng-init="init()" cache-view="false">
+
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="song in songs" class="item item-thumbnail-left item-icon-right">
+
+        <img ng-src="img/headphone.png" width="20px">
+        <div ng-click="playsong(song)">
+          <p>&nbsp;</p>
+          <h2>{{song.title}}</h2>
+          <h3>{{song.desc}}</h3>
+          <img ng-src="img/eq.gif" ng-show="song.title==currentTrack.title">
+        </div>
+
+        <i ng-click="stopsong()" ng-show="song.title==currentTrack.title" class="icon ion-stop"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-view>

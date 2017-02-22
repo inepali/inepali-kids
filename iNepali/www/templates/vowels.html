@@ -1,0 +1,23 @@
+<ion-view view-title="Vowels" cache-view="false" ng-init="init()"  style="background-color:black">
+    <ion-content scroll="false" >
+
+<ion-content scroll="false">
+  <!--ion-slide-box options="options" on-slide-changed="slideChanged(index)" show-pager="false" ng-if="data">
+    <ion-slide ng-repeat="item in data">
+      <img ng-src="img/{{item.char}}.gif" width="{{screenWidth}}" height="90%">
+    </ion-slide>
+  </ion-slide-box-->
+
+  <ion-slides  options="options" slider="data.slider">
+    <ion-slide-page ng-repeat="item in data">
+      <div class="box"><img ng-click="play_ext()" ng-src="img/{{item.char}}.gif">
+      <div class="english">{{item.english}}</div>
+      </div>
+    </ion-slide-page>
+  </ion-slides>
+
+</ion-content>
+
+
+</ion-content>
+</ion-view>

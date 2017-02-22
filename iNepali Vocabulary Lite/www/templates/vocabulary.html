@@ -1,0 +1,29 @@
+<ion-view view-title="Vocabulary" ng-init="initItems()" cache-view="false">
+  <ion-content>
+    <ion-list>
+      <ion-refresher pulling-text="Pull to refresh..." on-refresh="refreshItems()"></ion-refresher>
+
+      <div class="item item-divider">
+        <h2 class="title text-center">{{name}}</h2>
+      </div>
+      <ion-item ng-repeat="item in items" class="item item-text-wrap item-icon-right" >
+
+        <div style="float:left; padding-right:10px;">
+<ionic-letter-avatar ng-if="!item.thumbnail" shape="round" data="{{item.english}}"></ionic-letter-avatar>
+<img ng-if="item.thumbnail" ng-src="{{item.thumbnail}}" width="50px" style="float: left; border-radius: 30px">
+</div>
+
+<div style="padding-left:10px; padding-top:10px">
+<h2>{{item.english}}</h2>
+<h3>{{item.nepali}} <i class="icon ion-volume-high" ng-click="speakText(item.nepali)" ></i></h3>
+
+</div>
+
+
+</ion-item>
+
+
+
+</ion-list>
+</ion-content>
+</ion-view>

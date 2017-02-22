@@ -1,0 +1,25 @@
+<ion-view view-title="{{selectedVdo.title}}" ng-init="init()">
+    <ion-content scroll="false">
+
+        <div class="card card-primary">
+            <div class="item item-divider item-text-wrap">
+                <h2>{{selectedVdo.title}}</h2>
+            </div>
+
+            <iframe width="100%" height="300px" ng-src="{{trustSrc(selectedVdo.url)}}" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+        <!--div id="adContainer"></div>
+        <script src="http://cdn.millennialmedia.com/mmadlib/v1/mmadlib.js"></script>
+        <script>
+            window.mmAPI.placeAd({
+                containerElementId: "adContainer",
+                apid: "235832",
+                placementType: "inline",
+                width: 300,
+                height: 250,
+                allowLocation: true
+            });
+        </script-->
+</ion-content>
+</ion-view>

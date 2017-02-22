@@ -1,0 +1,11 @@
+{
+  "name": "iNepali Lite",
+  "short_name": "This is our first attempt to make an app to learn Nepali for our kids on mobile device such as iPhone/iPad. In this version, we include basic Nepali alphabets (Consonants, Vowels and Numbers) with picture cards, including Barkhari",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
