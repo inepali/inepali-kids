@@ -1,4 +1,4 @@
-mobile
+iNepali Lite, iNepali 
 ======
 
-inepali mobile development
+inepali app for kids
